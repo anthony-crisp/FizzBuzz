@@ -1,4 +1,5 @@
 def fizz_buzz(n)
+ if n.is_a?(Integer)
   if n % 15 == 0
     "FizzBuzz"
   elsif n % 3 == 0
@@ -7,5 +8,8 @@ def fizz_buzz(n)
     "Buzz"
   else
     n
+  end
+else
+  "Not an Integer"
   end
 end

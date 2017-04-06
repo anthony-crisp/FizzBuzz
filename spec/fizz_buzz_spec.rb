@@ -13,5 +13,8 @@ describe 'fizz_buzz'do
   it "should return number if passed 4" do
     expect(fizz_buzz(4)).to eq 4
   end
+  it "should return 'Not an Integer' if input is a string" do
+    expect(fizz_buzz("4")).to eq "Not an Integer"
+  end
 
 end
