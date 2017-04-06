@@ -16,5 +16,9 @@ describe 'fizz_buzz'do
   it "should return 'Not an Integer' if input is a string" do
     expect(fizz_buzz("4")).to eq "Not an Integer"
   end
-
+  it "tests for 'FizzBuzz'up to 100" do
+    Array(1..100).select { |x| x % 15 == 0}.each do |n| 
+    expect(fizz_buzz(n)).to eq "FizzBuzz"
+    end
+  end
 end
