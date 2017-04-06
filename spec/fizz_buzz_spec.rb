@@ -10,5 +10,8 @@ describe 'fizz_buzz'do
   it "should return 'FizzBuzz'if passed 15" do
   expect(fizz_buzz(15)).to eq "FizzBuzz"
   end
+  it "should return number if passed 4" do
+    expect(fizz_buzz(4)).to eq 4
+  end
 
 end
