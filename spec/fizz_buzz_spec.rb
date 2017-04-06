@@ -17,8 +17,18 @@ describe 'fizz_buzz'do
     expect(fizz_buzz("4")).to eq "Not an Integer"
   end
   it "tests for 'FizzBuzz'up to 100" do
-    Array(1..100).select { |x| x % 15 == 0}.each do |n| 
+    Array(1..100).select { |x| x % 15 == 0}.each do |n|
     expect(fizz_buzz(n)).to eq "FizzBuzz"
+    end
+  end
+  it "tests for 'Fizz'up to 100" do
+    Array(1..100).select { |x| x % 3 == 0 && x % 15 != 0}.each do |n|
+    expect(fizz_buzz(n)).to eq "Fizz"
+    end
+  end
+  it "tests for 'Buzz'up to 100" do
+    Array(1..100).select { |x| x % 5 == 0 && x % 15 != 0}.each do |n|
+    expect(fizz_buzz(n)).to eq "Buzz"
     end
   end
 end
